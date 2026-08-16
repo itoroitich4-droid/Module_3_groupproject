@@ -1,6 +1,7 @@
 const API_KEY = "6a49a896e1a266bc4725c57c0c714343"; 
 const BASE_URL = "https://api.themoviedb.org/3";
 
+// Movies
 export const fetchPopularMovies = async () => {
   const res = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`);
   return res.json();
@@ -21,34 +22,14 @@ export const fetchTrendingMovies = async () => {
   return res.json();
 };
 
-export const fetchMoviesByGenre = async (genreId) => {
-  const res = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}`);
-  return res.json();
-};
-
 export const fetchMovieDetails = async (id) => {
   const res = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}&append_to_response=credits,videos`);
   return res.json();
 };
 
-export const fetchMovieTrailers = async (id) => {
-  const res = await fetch(`${BASE_URL}/movie/${id}/videos?api_key=${API_KEY}`);
-  return res.json();
-};
-
-export const fetchWatchProviders = async (id) => {
-  const res = await fetch(`${BASE_URL}/movie/${id}/watch/providers?api_key=${API_KEY}`);
-  return res.json();
-};
-
-// for the tv show
+// TV Shows
 export const fetchPopularTV = async () => {
   const res = await fetch(`${BASE_URL}/tv/popular?api_key=${API_KEY}`);
-  return res.json();
-};
-
-export const fetchTVByGenre = async (genreId) => {
-  const res = await fetch(`${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=${genreId}`);
   return res.json();
 };
 
@@ -57,18 +38,8 @@ export const fetchTVDetails = async (id) => {
   return res.json();
 };
 
-// for searching
+// Search
 export const searchMulti = async (query) => {
   const res = await fetch(`${BASE_URL}/search/multi?api_key=${API_KEY}&query=${query}`);
-  return res.json();
-};
-
-export const searchMovies = async (query) => {
-  const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`);
-  return res.json();
-};
-
-export const searchTVShows = async (query) => {
-  const res = await fetch(`${BASE_URL}/search/tv?api_key=${API_KEY}&query=${query}`);
   return res.json();
 };
