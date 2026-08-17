@@ -1,4 +1,3 @@
-// src/components/AuthForm.jsx
 import React, { useState } from "react";
 
 const AuthForm = ({ onLogin }) => {
@@ -9,14 +8,13 @@ const AuthForm = ({ onLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!email || !password) {
       setError("Please enter both email and password.");
       return;
     }
 
-    // Call parent login handler
     const success = onLogin(email, password);
+
     if (!success) {
       setError("Invalid email or password.");
     } else {
@@ -35,11 +33,16 @@ const AuthForm = ({ onLogin }) => {
         </h2>
 
         {error && (
-          <p className="text-red-500 text-sm mb-4 text-center">{error}</p>
+          <p className="text-red-500 text-sm mb-4 text-center">
+            {error}
+          </p>
         )}
 
         <div className="mb-4">
-          <label className="block text-gray-300 mb-2">Email</label>
+          <label className="block text-gray-300 mb-2">
+            Email
+          </label>
+
           <input
             type="email"
             value={email}
@@ -50,7 +53,10 @@ const AuthForm = ({ onLogin }) => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-gray-300 mb-2">Password</label>
+          <label className="block text-gray-300 mb-2">
+            Password
+          </label>
+
           <input
             type="password"
             value={password}
@@ -70,4 +76,5 @@ const AuthForm = ({ onLogin }) => {
     </div>
   );
 };
+
 export default AuthForm;
