@@ -8,21 +8,21 @@ import SingleMoviePage from "./pages/SingleMoviePage";
 import Login from "./pages/Login";
 
 function App() {
-  return (
-    <Router>
-      <div className="bg-gray-900 min-h-screen text-white">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/movies/:id" element={<SingleMoviePage />} />
-          <Route path="/tv" element={<TvShows />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-  );
+return (
+  <Router>
+  <div className="bg-gray-900 min-h-screen text-white">
+    <Header />
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/movies" element={<Movies />} />
+      <Route path="/movies/:id" element={<SingleMoviePage />} />
+      <Route path="/tv" element={<TvShows />} />
+      <Route path="/login" element={<Login />} />
+      </Routes>
+      <Footer />
+  </div>
+  </Router>
+);
 }
 
 export default App;

@@ -10,8 +10,7 @@ export default function SingleMoviePage() {
   useEffect(() => {
     fetchMovieDetails(id).then(data => setMovie(data));
   }, [id]);
-
   if (!movie) return <p className="p-4">Loading...</p>;
 
-  return <SingleMovieContainer movie={movie} />;
+return <SingleMovieContainer movie={movie} />;
 }
