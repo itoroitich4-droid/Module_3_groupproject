@@ -1,7 +1,8 @@
-export default function Footer() {
-  return (
-    <footer className="bg-gray-800 p-4 text-center">
-      <p>FlickForge Movie website</p>
-    </footer>
-  );
+function Footer(){
+return(
+    <>
+   <p> For The Fans, By The Fans</p>
+    </>
+)
 }
+export default Footer;
