@@ -1,0 +1,44 @@
+/* Universal Box Sizing & Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Body Styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #0b0f17; /* Dark background to match sidebar */
+  color: #f1f5f9;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Global Link Resets */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Main Content Area Styling (matches .rightpanel) */
+.rightpanel {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 30px;
+  min-height: 100vh;
+  background-color: #0b0f17;
+}
+
+/* Responsive Fix for Mobile Screens */
+@media (max-width: 768px) {
+  .sidepanel {
+    width: 200px;
+  }
+  .rightpanel {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    padding: 15px;
+  }
+}

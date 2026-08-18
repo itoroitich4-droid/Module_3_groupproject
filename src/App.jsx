@@ -10,6 +10,7 @@ import Fav from './pages/Fav'
 import Search from './pages/Search'
 import Browse from './pages/Browse'
 import DetailPage from './pages/DetailPage'
+import './App.css'
 
 function App() {
 return (
