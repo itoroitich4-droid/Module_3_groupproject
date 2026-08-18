@@ -1,5 +1,6 @@
  import { Link} from "react-router-dom"
  import {useState} from "react"
+ import Footer from './Footer'
  
  function SidePanel(){
     
@@ -22,6 +23,7 @@ return(
     <button>Top Rated</button><br />
     <button>Favourites</button>
 </div>
+<Footer />
     </main>
 )
 }
