@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { fetchPopularMovies } from "../movieapi/movieapi.js";
-import MovieCard from "../components/MovieCard";
+import { fetchPopularMovies } from "../movieapi/movieapi";
+import MediaCard from "../components/MediaCard";
 
 export default function MoviesPage() {
-   const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 
-useEffect(() => {
+  useEffect(() => {
     const loadMovies = async () => {
       const data = await fetchPopularMovies();
       setMovies(data);
@@ -13,12 +13,15 @@ useEffect(() => {
     loadMovies();
   }, []);
 
-return(
-<div>
-<h1>Popular Movies</h1>
-   <div>
-   {movies.map(movie => (<MovieCard key={movie.id} movie={movie} />))}
-   </div>
-</div>
-);
+  return (
+    <div>
+      <h1>Popular Movies</h1>
+      <div>
+        {movies.map(movie => (
+          <MediaCard key={movie.id} item={movie} type="movie" />
+        ))}
+      </div>
+    </div>
+  );
 }
+
