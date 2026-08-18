@@ -12,16 +12,16 @@ return(
 
 <div>
     <Link to="/home"><button>Home</button><br /></Link>
-    <button>Search</button><br />
-    <button>Browse</button><br />
-    <Link to="login"><button>Login</button></Link>
+    <Link to="/search"><button>Search</button></Link><br />
+    <Link to="/browse"><button>Browse</button></Link><br />
+    <Link to="/login"><button>Login</button></Link>
 </div>
 <div >
     <p>Media</p><br />
-    <button>Movies</button><br />
-    <button>TvShow</button><br />
-    <button>Top Rated</button><br />
-    <button>Favourites</button>
+    <Link to="/movies"><button>Movies</button></Link><br />
+    <Link to="/shows"><button>TvShow</button></Link><br />
+    <Link to="/toptier"><button>Top Rated</button></Link><br />
+    <Link to="/favourites"><button>Favourites</button></Link>
 </div>
 <Footer />
     </main>

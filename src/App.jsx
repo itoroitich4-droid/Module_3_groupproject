@@ -3,6 +3,12 @@ import SidePanel from './components/SidePanel'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import CreateAccount from './pages/Createaccount'
+import MoviesPage from './pages/MoviesPage'
+import TvShow from './pages/TvShow'
+import TopRated from './pages/TopRated'
+import Fav from './pages/Fav'
+import Search from './pages/Search'
+import Browse from './pages/Browse'
 
 function App() {
 return (
@@ -14,7 +20,12 @@ return (
       <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/login/create" element={<CreateAccount />} />
-     
+       <Route path="/movies" element={<MoviesPage />} />
+       <Route path="/shows" element={<TvShow />} />
+       <Route path="/toptier" element={<TopRated />} />
+       <Route path="/favourites" element={<Fav />} />
+       <Route path="/search" element={<Search />} />
+       <Route path="/browse" element={<Browse />} />
       </Routes>
   </main>
   </Router>
