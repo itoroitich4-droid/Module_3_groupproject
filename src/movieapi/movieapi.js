@@ -36,3 +36,19 @@ export async function fetchTopRatedTVShows() {
     return data.results;
 }
 
+// for searchbar 
+export async function searchMovies(query) {
+  const response = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+
+const data = await response.json();
+
+ return data.results;
+}
+// for bladerunner 2049
+export async function fetchBladeRunner() {
+  const response = await fetch(`${BASE_URL}/movie/335984?api_key=${API_KEY}`);
+
+  const data = await response.json();
+
+  return data;
+}

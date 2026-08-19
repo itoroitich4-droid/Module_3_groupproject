@@ -9,6 +9,7 @@ import TopRated from './pages/TopRated'
 import Fav from './pages/Fav'
 import Search from './pages/Search'
 import DetailPage from './pages/DetailPage'
+import SearchResults from "./pages/SearchResults";
 import './App.css'
 
 function App() {
@@ -25,8 +26,10 @@ return (
        <Route path="/shows" element={<TvShow />} />
        <Route path="/toptier" element={<TopRated />} />
        <Route path="/favourites" element={<Fav />} />
-       <Route path="/search" element={<Search />} />
-             <Route path="/detail/:type/:id" element={<DetailPage />} />
+       <Route path="/search" element={<Search />}>
+            <Route path="results" element={<SearchResults />} />
+       </Route>     
+      <Route path="/detail/:type/:id" element={<DetailPage />} />
       </Routes>
   </main>
   </Router>
