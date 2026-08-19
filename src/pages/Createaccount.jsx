@@ -29,7 +29,7 @@ setTimeout(() => {navigate("/login");}, 2000);
 return(
  <>
  <h2>Join Our Fan Community</h2>
- <form onSubmit={handleSubmit}>
+ <form onSubmit={handleSubmit} className="loginform">
        <input  type="text" placeholder="Enter username" value={username}
             onChange={(e) => setUsername(e.target.value)} /><br />
      

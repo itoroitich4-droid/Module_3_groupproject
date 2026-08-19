@@ -20,7 +20,7 @@ if (user) {setMessage("Login successful!");
 }
     };
 return ( <>
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit} className="loginform">
 <input type="text" placeholder="username"  value={username}
      onChange={(e) => setUsername(e.target.value)}/> <br />
 <input type="password" placeholder="password" value={password}
