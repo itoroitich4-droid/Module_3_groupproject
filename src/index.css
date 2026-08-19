@@ -98,13 +98,241 @@ padding: 20px;
   background:red;
   background-clip: padding-box;
 }
-.loginform{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.loginform {
+  width: 350px;
+  margin: 80px auto;
+  padding: 35px;
+  background-color: #181818;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   text-align: center;
+}
 
-    
+.loginform input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.loginform input:focus {
+  border-color: #e50914;
+}
+
+.loginform input::placeholder {
+  color: #888;
+}
+
+.loginform button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e50914;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.loginform button:hover {
+  background-color: #b20710;
+  transform: translateY(-2px);
+}
+
+.loginform p {
+  color: #aaa;
+  margin: 5px 0 15px;
+}
+.card {
+  width: 200px;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  display: block;
+}
+
+.card p {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 12px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card button {
+  width: calc(100% - 20px);
+  margin: 0 10px 12px;
+  padding: 9px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e50914;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card button:hover {
+  background-color: #b20710;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Dark gradient over the image */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.65) 40%,
+    rgba(0, 0, 0, 0.2) 75%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  left: 50px;
+  bottom: 60px;
+  width: 450px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.hero-content button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e50914;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-content button:hover {
+  background-color: #b20710;
+  transform: scale(1.05);
+}
+.detail {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #181818;
+  border-radius: 12px;
+  color: white;
+  align-items: center;
+}
+
+.detail img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.detail h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.detail p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.detail p:last-child {
+  font-weight: bold;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .detail {
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .detail img {
+    width: 220px;
+    height: 330px;
+  }
+.detail h1 {
+    font-size: 30px;
+  }
+}
+.layout {
+  padding: 30px;
+  color: white;
+}
+
+.layout h1 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.layout > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 200px));
+  gap: 25px;
 }

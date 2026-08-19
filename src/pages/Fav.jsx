@@ -10,7 +10,7 @@ export default function Favourites() {
   }, []);
 
   return (
-    <div>
+    <div className="layout">
    <h1>My Favourites</h1>
       {favorites.length === 0 ? (<p>You haven't added anything to your favourites yet.</p>) : 
       (<div className="movie-container">

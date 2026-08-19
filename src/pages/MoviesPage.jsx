@@ -14,7 +14,7 @@ export default function MoviesPage() {
   }, []);
 
   return (
-    <div>
+    <div className="layout">
       <h1>Popular Movies</h1>
       <div>
         {movies.map(movie => (

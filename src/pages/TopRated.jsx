@@ -13,7 +13,7 @@ export default function TopRated() {
   }, []);
 
   return (
-    <div className="top-rated">
+    <div className="layout">
       <h1>Top Rated Movies</h1>
 
       <div className="movie-container">

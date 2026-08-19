@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 
+
 export default function Search() {
   return (
     <div>

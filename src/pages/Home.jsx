@@ -47,7 +47,7 @@ export default function Home() {
       )}
 
       {/* POPULAR MOVIES */}
-      <section>
+      <section className="layout">
         <h2>Popular Movies</h2>
 
         <div className="movie-container">
@@ -62,7 +62,7 @@ export default function Home() {
       </section>
 
       {/* TOP RATED MOVIES */}
-      <section>
+      <section className="layout">
         <h2>Top Rated Movies</h2>
 
         <div className="movie-container">
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* POPULAR TV SHOWS */}
-      <section>
+      <section className="layout">
         <h2>Popular TV Shows</h2>
 
         <div className="movie-container">
@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* TOP RATED TV SHOWS */}
-      <section>
+      <section className="layout">
         <h2>Top Rated TV Shows</h2>
 
         <div className="movie-container">

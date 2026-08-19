@@ -14,7 +14,7 @@ export default function TvShow() {
   }, []);
 
   return (
-    <div>
+    <div className="layout">
       <h1>Popular TV Shows</h1>
       <div>
         {shows.map(show => (

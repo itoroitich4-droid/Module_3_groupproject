@@ -29,7 +29,7 @@ export default function MediaCard({ item, type }) {
   };
 
   return (
-    <div onClick={() => navigate(`/detail/${type}/${item.id}`)}>
+    <div onClick={() => navigate(`/detail/${type}/${item.id}`)} className="card">
       <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.title || item.name}/>
       <p>{item.title || item.name}</p>
       <button onClick={toggleFavorite}>{favorite ? "Remove from Favourites" : "Add to Favourites"}
