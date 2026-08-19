@@ -14,6 +14,7 @@ const handleSubmit = async (e) => {e.preventDefault();
  const user = users.find((user) =>user.username === username && user.password === password );
 
 if (user) {setMessage("Login successful!");
+     
  setTimeout(() => {navigate("/home");}, 2000);
 } else { setMessage("Incorrect username or password");
 }

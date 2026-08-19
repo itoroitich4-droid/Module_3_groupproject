@@ -8,7 +8,6 @@ import TvShow from './pages/TvShow'
 import TopRated from './pages/TopRated'
 import Fav from './pages/Fav'
 import Search from './pages/Search'
-import Browse from './pages/Browse'
 import DetailPage from './pages/DetailPage'
 import './App.css'
 
@@ -27,8 +26,7 @@ return (
        <Route path="/toptier" element={<TopRated />} />
        <Route path="/favourites" element={<Fav />} />
        <Route path="/search" element={<Search />} />
-       <Route path="/browse" element={<Browse />} />
-       <Route path="/detail/:type/:id" element={<DetailPage />} />
+             <Route path="/detail/:type/:id" element={<DetailPage />} />
       </Routes>
   </main>
   </Router>
