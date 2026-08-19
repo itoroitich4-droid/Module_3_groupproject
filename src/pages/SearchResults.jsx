@@ -22,7 +22,7 @@ const getResults = async () => {
   }
 
   return (
-    <div>
+    <div className="layout">
       <h2>Results for "{query}"</h2>
       <div className="movie-container">
         {results.map((movie) => (
